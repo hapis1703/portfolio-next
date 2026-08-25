@@ -28,16 +28,24 @@ export default function AboutPage() {
       </section>
 
       <section className="mx-auto max-w-3xl px-4 pb-20 sm:px-6">
-        {TIMELINE.map((entry, i) => (
-          <Reveal key={entry.year} delay={i * 0.05}>
-            <div className="grid grid-cols-[5rem_1fr] gap-6 border-l border-line py-6 pl-6 sm:grid-cols-[8rem_1fr]">
-              <p className="-ml-[29px] h-fit rounded-full border border-line bg-base px-3 py-1 text-center font-mono text-xs text-accent">
-                {entry.year}
-              </p>
-              <p className="leading-relaxed text-muted">{entry.text}</p>
-            </div>
-          </Reveal>
-        ))}
+        <div className="space-y-12 border-l border-line pl-8 sm:pl-10">
+          {TIMELINE.map((entry, i) => (
+            <Reveal key={entry.year} delay={i * 0.05}>
+              <div className="relative">
+                <span
+                  aria-hidden
+                  className="absolute -left-[37px] top-1.5 size-2.5 rounded-full bg-accent ring-4 ring-base sm:-left-[45px]"
+                />
+                <p className="font-mono text-xs uppercase tracking-[0.18em] text-accent">
+                  {entry.year}
+                </p>
+                <p className="mt-2 max-w-[58ch] leading-relaxed text-muted">
+                  {entry.text}
+                </p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
       </section>
 
       <section className="mx-auto max-w-3xl px-4 pb-24 sm:px-6">
