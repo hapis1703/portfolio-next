@@ -9,7 +9,7 @@ export const metadata = {
 
 const LINKS = [
   { label: "GitHub", href: SITE.github, note: "code and contributions" },
-  { label: "Email", href: "mailto:hello@hepiss.my.id", note: "slowest but surest" },
+  { label: "Email", href: "mailto:hepiss1703@gmail.com", note: "slowest but surest" },
 ];
 
 export default function ContactPage() {
